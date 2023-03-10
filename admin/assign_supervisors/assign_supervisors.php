@@ -23,43 +23,7 @@
 
 			 ?>
 
-
-			<!DOCTYPE html>
-			<html lang="en" class="bg-pink">
-			<head>
-			  <meta charset="utf-8">
-			  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-			  <meta name="viewport" content="width=device-width, initial-scale=1">
-			  <title>IASMS</title>
-
-			  <link rel="stylesheet" href="../../css/bootstrap-theme.min.css"/>
-			  <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
-			  <link rel="stylesheet" href="../../css/main_page_style.css"/>
-			  <link rel="stylesheet" href="assign_supervisors.css"/>
-
-			  <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"/></script>
-			  <script type="text/javascript" src="../../js/bootstrap.min.js"/></script>
-
-
-			</head>
-			<body>
-
-			<div id="top-navigation">
-			<div id="student_name"><span style="color:rgb(255, 198, 0);font-size:1.1em"><em>Welcome,</em>&nbsp; </span><span style="font-family:serif"><?php echo "Admin"?></span></div>
-			</div>
-
-			<div id="left_side_bar">
-			<ul id="menu_list">
-			  <a class="menu_items_link" href="../view_registered_students/view_registered_students.php"><li class="menu_items_list">Registered Students</li></a>
-			  <a class="menu_items_link" href="../students_assumptions/students_assumptions.php"><li class="menu_items_list" >Student Assumptions</li></a>
-			  <a class="menu_items_link" href="assign_supervisors.php"><li class="menu_items_list" style="background-color:orange;padding-left:16px">Assign Supervisors</li></a>
-			  <a class="menu_items_link" href="../visiting_score/visiting_supervisors_score.php"><li class="menu_items_list">Visiting Superviors Score</li></a>
-			  <a class="menu_items_link" href="../company_score/company_supervisor_score.php"><li class="menu_items_list">Company Supervisor Score</li></a>
-			  <a class="menu_items_link" href="../change_password/change_password.php"><li class="menu_items_list">Change Password</li></a>
-			  <a class="menu_items_link" href="../../index.php"><li class="menu_items_list">Logout</li></a>
-			</ul>
-			</div>
-
+<?php include '../header.php'; ?>
 			<div class="container-fluid">
 			<div id="main_content">
 				<div class = "panel">
