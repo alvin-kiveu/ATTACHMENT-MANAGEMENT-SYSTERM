@@ -116,6 +116,7 @@ if (isset($_POST["btn_update"])) {
                 <?php
                 $execute_get_query = mysqli_query($conn, "SELECT * FROM week1_table WHERE index_number='$student_index_number'");
                 if (mysqli_num_rows($execute_get_query) > 0) {
+
                   $get_data = mysqli_fetch_assoc($execute_get_query);
                   $monday_job_assigned_holder = $get_data["monday_job_assigned"];
                   $monday_skill_acquired_holder = $get_data["monday_special_skill_acquired"];
@@ -131,7 +132,22 @@ if (isset($_POST["btn_update"])) {
 
                   $friday_job_assigned_holder = $get_data["friday_job_assigned"];
                   $friday_skill_acquired_holder = $get_data["friday_special_skill_acquired"];
+                }else{
+                  $monday_job_assigned_holder = "";
+                  $monday_skill_acquired_holder = "";
 
+                  $tuesday_job_assigned_holder = "";
+                  $tuesday_skill_acquired_holder = "";
+
+                  $wednesday_job_assigned_holder = "";
+                  $wednesday_skill_acquired_holder = "";
+
+                  $thursday_job_assigned_holder = "";
+                  $thursday_skill_acquired_holder = "";
+
+                  $friday_job_assigned_holder = "";
+                  $friday_skill_acquired_holder = "";
+                }
                   echo "<tr>";
                   echo "<td style='padding:20px;text-align:center'>" . "Monday" . "</td>";
                   echo "<td><textarea name='job_assigned_1' class='form-control adjusted_text_area'>$monday_job_assigned_holder</textarea>" . "</td>";
@@ -161,7 +177,7 @@ if (isset($_POST["btn_update"])) {
                   echo "<td><textarea name='job_assigned_5' class='form-control adjusted_text_area'>$friday_job_assigned_holder</textarea>" . "</td>";
                   echo "<td><textarea name='skill_acquired_5' class='form-control adjusted_text_area'>$friday_skill_acquired_holder</textarea>" . "</td>";
                   echo "</tr>";
-                }
+               
                 ?>
 
               </tbody>

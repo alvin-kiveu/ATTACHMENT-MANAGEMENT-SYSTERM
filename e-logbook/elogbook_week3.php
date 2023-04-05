@@ -118,23 +118,39 @@ if(isset($_POST["btn_update"])){
  
                   $get_previous_data = "SELECT * FROM week3_table WHERE index_number='$student_index_number'";
                   $execute_get_query = mysqli_query($conn,$get_previous_data);
-                  if(mysqli_num_rows($execute_get_query) > 0){
-                  $get_data = mysqli_fetch_assoc($execute_get_query);
+                  if (mysqli_num_rows($execute_get_query) > 0) {
 
-                  $monday_job_assigned_holder = $get_data["monday_job_assigned"];
-				  $monday_skill_acquired_holder = $get_data["monday_special_skill_acquired"];
-			
-			      $tuesday_job_assigned_holder = $get_data["tuesday_job_assigned"];
-				  $tuesday_skill_acquired_holder = $get_data["tuesday_special_skill_acquired"];
-			
-			      $wednesday_job_assigned_holder = $get_data["wednesday_job_assigned"];
-				  $wednesday_skill_acquired_holder = $get_data["wednesday_special_skill_acquired"];
-			
-			      $thursday_job_assigned_holder = $get_data["thursday_job_assigned"];
-				  $thursday_skill_acquired_holder = $get_data["thursday_special_skill_acquired"];
-			
-			      $friday_job_assigned_holder = $get_data["friday_job_assigned"];
-				  $friday_skill_acquired_holder = $get_data["friday_special_skill_acquired"];
+                    $get_data = mysqli_fetch_assoc($execute_get_query);
+                    $monday_job_assigned_holder = $get_data["monday_job_assigned"];
+                    $monday_skill_acquired_holder = $get_data["monday_special_skill_acquired"];
+  
+                    $tuesday_job_assigned_holder = $get_data["tuesday_job_assigned"];
+                    $tuesday_skill_acquired_holder = $get_data["tuesday_special_skill_acquired"];
+  
+                    $wednesday_job_assigned_holder = $get_data["wednesday_job_assigned"];
+                    $wednesday_skill_acquired_holder = $get_data["wednesday_special_skill_acquired"];
+  
+                    $thursday_job_assigned_holder = $get_data["thursday_job_assigned"];
+                    $thursday_skill_acquired_holder = $get_data["thursday_special_skill_acquired"];
+  
+                    $friday_job_assigned_holder = $get_data["friday_job_assigned"];
+                    $friday_skill_acquired_holder = $get_data["friday_special_skill_acquired"];
+                  }else{
+                    $monday_job_assigned_holder = "";
+                    $monday_skill_acquired_holder = "";
+  
+                    $tuesday_job_assigned_holder = "";
+                    $tuesday_skill_acquired_holder = "";
+  
+                    $wednesday_job_assigned_holder = "";
+                    $wednesday_skill_acquired_holder = "";
+  
+                    $thursday_job_assigned_holder = "";
+                    $thursday_skill_acquired_holder = "";
+  
+                    $friday_job_assigned_holder = "";
+                    $friday_skill_acquired_holder = "";
+                  }
                  
 				echo "<tr>";
 				echo "<td style='padding:20px;text-align:center'>"."Monday"."</td>";
@@ -165,7 +181,7 @@ if(isset($_POST["btn_update"])){
                 echo "<td><textarea name='job_assigned_5' class='form-control adjusted_text_area'>$friday_job_assigned_holder</textarea>"."</td>";
                 echo "<td><textarea name='skill_acquired_5' class='form-control adjusted_text_area'>$friday_skill_acquired_holder</textarea>"."</td>";
                 echo "</tr>";
-                  }
+
            ?>
 
         </tbody>
